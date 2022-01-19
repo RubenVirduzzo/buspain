@@ -339,10 +339,8 @@ input:checked + .slider:before {
   }
   .navbar .segunda-lista {
     display: flex;
-    flex-direction: row;
-    justify-content: end;
-    position: relative;
-    right: 36px;
+    position: absolute;
+    right: 5px;
     width: 38vw;
   }
   .navbar .segunda-lista .segunda-item {
