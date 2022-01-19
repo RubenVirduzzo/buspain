@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-size: 16px;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -22,30 +21,11 @@ a {
 }
 
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: 80px;
   margin-bottom: 45px;
   align-items: center;
-  box-shadow: 0 0 5px;
 }
 
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-.navbar .primera-lista {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 680px;
-}
 .navbar .primera-lista .primera-item {
-  vertical-align: middle;
-  margin-right: 57px;
   transition: 0.3s;
 }
 .navbar .primera-lista .primera-item:hover {
@@ -55,41 +35,23 @@ header {
 .navbar .primera-lista .primera-item a:hover {
   color: black;
 }
-.navbar .primera-lista .logo {
-  margin-top: -3px;
-  margin-right: 60px;
-  width: 90px;
-}
 .navbar .primera-lista .inicio a {
   color: black;
   font-weight: 600;
   transition: 0.3s;
 }
-.navbar .segunda-lista {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  margin-right: 36px;
-  width: 630px;
-}
 .navbar .segunda-lista .segunda-item {
-  margin-left: 43px;
   transition: 0.3s;
 }
 .navbar .segunda-lista .segunda-item:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
-.navbar .segunda-lista .segunda-item a {
-  vertical-align: sub;
-}
 .navbar .segunda-lista .segunda-item a:hover {
   color: black;
 }
 .navbar .segunda-lista .search input {
-  margin-top: 4px;
   text-align: center;
-  height: 25px;
   border: none;
   border-radius: 15px;
   box-shadow: 0 0 3px;
@@ -98,58 +60,35 @@ header {
   outline: none;
 }
 .navbar .segunda-lista .btn-registrate {
-  font-size: 16px;
-  height: 30px;
-  width: 110px;
   border-radius: 15px;
   border-style: none;
   background-color: #1EAAF1;
   color: white;
 }
 
-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-bottom: 95px;
-  padding-left: 55px;
-  padding-right: 55px;
-}
-section .hizquierda {
-  padding-top: 30px;
-}
-section .hizquierda .titulo {
-  margin-top: 0px;
-  height: 240px;
-  width: 550px;
-  font-size: 65px;
+section .titulo {
   font-weight: 700;
   color: #333;
 }
-section .hizquierda .texto {
-  height: 180px;
-  width: 550px;
+section .texto {
   font-weight: 400;
   color: #999999;
 }
-section .hizquierda .btn-tratas {
+section .btn-tratas {
   font-size: 16px;
-  height: 40px;
-  width: 250px;
   border-radius: 15px;
   border-style: none;
   background: #999999;
   box-shadow: 1px 2px 4px;
   transition: 0.3s;
 }
-section .hizquierda .btn-tratas:hover {
+section .btn-tratas:hover {
   box-shadow: 2px 3px 8px;
 }
-section .hizquierda .btn-tratas a {
+section .btn-tratas a {
   color: white;
 }
 section .derecha img {
-  width: 550px;
   border-radius: 15px;
   box-shadow: 10px 10px 6px;
 }
@@ -164,23 +103,13 @@ footer footer h3 {
   margin-bottom: -10px;
 }
 footer .lista-footer {
-  display: flex;
-  justify-content: center;
   padding: 0;
-}
-footer .lista-footer .foot-txt-hiz {
-  margin-top: -5px;
-  margin-right: 70px;
 }
 footer .lista-footer li {
   margin: 10px;
 }
 footer .lista-footer li img {
   width: 30px;
-}
-footer .lista-footer .foot-txt-der {
-  margin-top: -5px;
-  margin-left: 70px;
 }
 
 .switch {
@@ -234,6 +163,299 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  header {
+    margin: 0;
+    width: 100vw;
+    border-bottom: solid 1px;
+  }
+  header .primera-lista {
+    margin-left: -8.5vw;
+    text-align: center;
+    width: 100%;
+  }
+  header .primera-lista .logo {
+    width: 50vw;
+  }
+  header .primera-lista .inicio {
+    margin-top: 10vh;
+  }
+  header .primera-lista .inicio a {
+    color: black;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  header .segunda-lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-block-start: -20vh;
+    padding-inline-start: 0;
+    margin-left: -5vw;
+    width: 100%;
+  }
+  header .segunda-lista .segunda-item {
+    margin-left: 40px;
+    margin-bottom: 15vh;
+    transition: 0.3s;
+  }
+  header .segunda-lista .segunda-item:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  header .segunda-lista .segunda-item a {
+    vertical-align: sub;
+  }
+  header .segunda-lista .segunda-item a:hover {
+    color: black;
+  }
+  header .segunda-lista .search input {
+    margin-top: 4px;
+    text-align: center;
+    height: 25px;
+    width: 110px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 3px;
+  }
+  header .segunda-lista .search input:focus {
+    outline: none;
+  }
+  header .segunda-lista .inicia-session {
+    text-align: center;
+  }
+  header .segunda-lista .btn-registrate {
+    font-size: 16px;
+    height: 30px;
+    width: 110px;
+    border-radius: 15px;
+    border-style: none;
+    background-color: #1EAAF1;
+    color: white;
+  }
+
+  section {
+    padding: 2em;
+  }
+  section .texto {
+    padding: 1em;
+  }
+  section .btn-tratas {
+    height: 30px;
+    width: 210px;
+    margin-bottom: 4vh;
+    font-size: 16px;
+    border-radius: 15px;
+    border-style: none;
+    background: #999999;
+    box-shadow: 1px 2px 4px;
+    transition: 0.3s;
+  }
+  section .btn-tratas:hover {
+    box-shadow: 2px 3px 8px;
+  }
+  section .btn-tratas a {
+    color: white;
+  }
+  section .derecha img {
+    width: 80vw;
+    border-radius: 15px;
+    box-shadow: 10px 10px 6px;
+  }
+
+  footer {
+    margin-top: 150px;
+    text-align: center;
+    color: #999;
+  }
+  footer footer h3 {
+    font-weight: 400;
+  }
+  footer .lista-footer {
+    margin-top: -148px;
+    padding: 0;
+  }
+  footer .lista-footer span img {
+    margin-top: 3em;
+    margin-bottom: 1em;
+    width: 30px;
+  }
+  footer .lista-footer li {
+    margin: 10px;
+    transition: 0.3s;
+  }
+  footer .lista-footer li:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+@media screen and (min-width: 900px) {
+  header {
+    display: flex;
+    height: 80px;
+    margin-bottom: 45px;
+    align-items: center;
+    box-shadow: 0 0 5px;
+  }
+
+  .navbar {
+    display: flex;
+    width: 100%;
+  }
+  .navbar .primera-lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 45vw;
+  }
+  .navbar .primera-lista .primera-item {
+    vertical-align: middle;
+    margin-right: 57px;
+    transition: 0.3s;
+  }
+  .navbar .primera-lista .primera-item:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .navbar .primera-lista .primera-item a:hover {
+    color: black;
+  }
+  .navbar .primera-lista .logo {
+    margin-top: -3px;
+    margin-right: 60px;
+    width: 90px;
+  }
+  .navbar .primera-lista .inicio a {
+    color: black;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  .navbar .segunda-lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: relative;
+    right: 36px;
+    width: 38vw;
+  }
+  .navbar .segunda-lista .segunda-item {
+    margin-left: 43px;
+    transition: 0.3s;
+  }
+  .navbar .segunda-lista .segunda-item:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .navbar .segunda-lista .segunda-item a {
+    vertical-align: sub;
+  }
+  .navbar .segunda-lista .segunda-item a:hover {
+    color: black;
+  }
+  .navbar .segunda-lista .search input {
+    margin-top: 4px;
+    text-align: center;
+    height: 25px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 3px;
+  }
+  .navbar .segunda-lista .search input:focus {
+    outline: none;
+  }
+  .navbar .segunda-lista .btn-registrate {
+    font-size: 16px;
+    height: 30px;
+    width: 110px;
+    border-radius: 15px;
+    border-style: none;
+    background-color: #1EAAF1;
+    color: white;
+  }
+
+  section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 95px;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+  section .hizquierda {
+    padding-top: 30px;
+  }
+  section .hizquierda .titulo {
+    margin-top: 0px;
+    height: 240px;
+    width: 550px;
+    font-size: 65px;
+    font-weight: 700;
+    color: #333;
+  }
+  section .hizquierda .texto {
+    height: 180px;
+    width: 550px;
+    font-weight: 400;
+    color: #999999;
+  }
+  section .hizquierda .btn-tratas {
+    font-size: 16px;
+    height: 40px;
+    width: 250px;
+    border-radius: 15px;
+    border-style: none;
+    background: #999999;
+    box-shadow: 1px 2px 4px;
+    transition: 0.3s;
+  }
+  section .hizquierda .btn-tratas:hover {
+    box-shadow: 2px 3px 8px;
+  }
+  section .hizquierda .btn-tratas a {
+    color: white;
+  }
+  section .derecha img {
+    width: 550px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 6px;
+  }
+
+  footer {
+    margin-top: 150px;
+    text-align: center;
+    color: #999;
+  }
+  footer footer h3 {
+    font-weight: 400;
+    margin-bottom: -10px;
+  }
+  footer .lista-footer {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  footer .lista-footer .foot-txt-hiz {
+    margin-top: -5px;
+    margin-right: 70px;
+  }
+  footer .lista-footer li {
+    margin: 10px;
+  }
+  footer .lista-footer span img {
+    width: 30px;
+    margin: 8px;
+  }
+  footer .lista-footer .foot-txt-der {
+    margin-top: -5px;
+    margin-left: 70px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

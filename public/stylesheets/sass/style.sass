@@ -21,13 +21,12 @@
 @mixin hover
     cursor: pointer
     transform: scale(1.1)
-    
+
 //// Start Inicio (index)
 
 body 
     margin: 0
     padding: 0
-    font-size: 16px
     font-family: 'Open Sans', sans-serif
 
 li
@@ -45,23 +44,14 @@ a
 // Start header
 
 header
-    @include flex-row-center
-    height: 80px
+
     margin-bottom: 45px
     align-items: center
-    box-shadow: 0 0 5px
 
 .navbar 
-    @include flex-row-between
-    width: 100%
-    
     .primera-lista 
-        @include flex-row-around
-        width: 680px
 
         .primera-item 
-            vertical-align: middle
-            margin-right: 57px
             transition: .3s
 
             &:hover
@@ -69,11 +59,6 @@ header
 
             a:hover
                 color: black
-            
-        .logo 
-            margin-top: -3px
-            margin-right: 60px
-            width: 90px
 
         .inicio a 
             color: black
@@ -82,26 +67,20 @@ header
     
 
     .segunda-lista 
-        @include flex-row-end
-        margin-right: 36px
-        width: 630px
         
         .segunda-item 
-            margin-left: 43px
             transition: .3s
             &:hover
                 @include hover
 
             a
-                vertical-align: sub
                 &:hover
                     color: black
         
         .search 
             input 
-                margin-top: 4px
+
                 text-align: center
-                height: 25px
                 border: none
                 border-radius: 15px
                 box-shadow: 0 0 3px
@@ -109,9 +88,6 @@ header
                     outline: none
 
         .btn-registrate 
-            font-size: 16px
-            height: 30px
-            width: 110px
             border-radius: 15px
             border-style: none
             background-color: #1EAAF1
@@ -120,46 +96,31 @@ header
 
 // Start section
 section
-    @include flex-row-around
-    margin-bottom: 95px
-    padding-left: 55px
-    padding-right: 55px
+       
+    .titulo 
+        font-weight: 700
+        color: #333
+    
+    .texto 
+        font-weight: 400
+        color: #999999
 
-    .hizquierda
-        padding-top: 30px
-        .titulo 
-            margin-top: 0px
-            height: 240px
-            width: 550px
-            font-size: 65px
-            font-weight: 700
-            color: #333
+    .btn-tratas 
+        font-size: 16px
+        border-radius: 15px
+        border-style: none
+        background: #999999
+        box-shadow: 1px 2px 4px
+        transition: .3s
+
+        &:hover
+            box-shadow: 2px 3px 8px
         
-        .texto 
-            height: 180px
-            width: 550px
-            font-weight: 400
-            color: #999999
-
-        .btn-tratas 
-            font-size: 16px
-            height: 40px
-            width: 250px
-            border-radius: 15px
-            border-style: none
-            background: #999999
-            box-shadow: 1px 2px 4px
-            transition: .3s
-
-            &:hover
-                box-shadow: 2px 3px 8px
-            
-            a
-                color: white
+        a
+            color: white
     
     .derecha 
         img    
-            width: 550px
             border-radius: 15px
             box-shadow: 10px 10px 6px
 // End section 
@@ -178,23 +139,13 @@ footer
 
 
     .lista-footer 
-        display: flex
-        justify-content: center
         padding: 0
-
-        .foot-txt-hiz 
-            margin-top: -5px
-            margin-right: 70px
 
         li 
             margin: 10px
         
             img 
                 width: 30px
-            
-        .foot-txt-der 
-            margin-top: -5px
-            margin-left: 70px
 
 //  End footer   
 
@@ -251,3 +202,294 @@ input:checked + .slider:before
   
 .slider.round:before 
     border-radius: 50%
+
+
+// responsive
+@media screen and ( max-width: 900px )
+    body
+        text-align: center
+        padding: 1rem
+    header
+        margin: 0
+        width: 100vw
+        border-bottom: solid 1px
+
+        .primera-lista 
+            margin-left: -8.5vw
+            text-align: center
+            width: 100% 
+            .logo 
+                width: 50vw
+
+            .inicio 
+                margin-top: 10vh
+                a  
+                    color: black
+                    font-weight: 600
+                    transition: .3s
+        
+        .segunda-lista 
+            @include flex-row-center
+            margin-block-start: -20vh
+            padding-inline-start: 0
+            margin-left: -5vw
+            width: 100%
+            
+            .segunda-item 
+                margin-left: 40px
+                margin-bottom: 15vh
+                transition: .3s
+                &:hover
+                    @include hover
+
+                a
+                    vertical-align: sub
+                    &:hover
+                        color: black
+            
+            .search 
+                input 
+                    margin-top: 4px
+                    text-align: center
+                    height: 25px
+                    width: 110px
+                    border: none
+                    border-radius: 15px
+                    box-shadow: 0 0 3px
+                    &:focus 
+                        outline: none
+            .inicia-session
+                text-align: center
+            .btn-registrate 
+                font-size: 16px
+                height: 30px
+                width: 110px
+                border-radius: 15px
+                border-style: none
+                background-color: #1EAAF1
+                color: white
+
+    // End header 
+
+    // Start section
+
+    section
+        padding: 2em
+
+        .texto
+            padding: 1em
+        .btn-tratas 
+            height: 30px
+            width: 210px
+            margin-bottom: 4vh
+            font-size: 16px
+            border-radius: 15px
+            border-style: none
+            background: #999999
+            box-shadow: 1px 2px 4px
+            transition: .3s
+
+            &:hover
+                box-shadow: 2px 3px 8px
+            
+            a
+                color: white
+        
+        .derecha 
+            img    
+                width: 80vw
+                border-radius: 15px
+                box-shadow: 10px 10px 6px
+
+    // End section 
+
+    //  Start footer    
+
+    footer 
+        margin-top: 150px
+        text-align: center
+        color: #999
+
+        footer h3 
+            font-weight: 400
+
+
+        .lista-footer 
+            margin-top: -148px
+            padding: 0
+
+            span
+                img 
+                    margin-top: 3em
+                    margin-bottom: 1em
+                    width: 30px
+
+            li 
+                margin: 10px
+                transition: .3s
+                &:hover
+                    @include hover
+
+    //  End footer  
+
+
+
+@media screen and (min-width: 900px)
+    // Start header
+
+    header
+        display: flex
+        height: 80px
+        margin-bottom: 45px
+        align-items: center
+        box-shadow: 0 0 5px
+
+    .navbar 
+        display: flex
+        width: 100%
+        
+        .primera-lista 
+            @include flex-row-around
+            width: 45vw
+
+            .primera-item 
+                vertical-align: middle
+                margin-right: 57px
+                transition: .3s
+
+                &:hover
+                    @include hover
+
+                a:hover
+                    color: black
+                
+            .logo 
+                margin-top: -3px
+                margin-right: 60px
+                width: 90px
+
+            .inicio a 
+                color: black
+                font-weight: 600
+                transition: .3s
+        
+
+        .segunda-lista 
+            @include flex-row-end
+            position: relative
+            right: 36px
+            width: 38vw
+            
+            .segunda-item 
+                margin-left: 43px
+                transition: .3s
+                &:hover
+                    @include hover
+
+                a
+                    vertical-align: sub
+                    &:hover
+                        color: black
+            
+            .search 
+                input 
+                    margin-top: 4px
+                    text-align: center
+                    height: 25px
+                    border: none
+                    border-radius: 15px
+                    box-shadow: 0 0 3px
+                    &:focus 
+                        outline: none
+
+            .btn-registrate 
+                font-size: 16px
+                height: 30px
+                width: 110px
+                border-radius: 15px
+                border-style: none
+                background-color: #1EAAF1
+                color: white
+    // End header 
+
+    // Start section
+    section
+        @include flex-row-around
+        margin-bottom: 95px
+        padding-left: 55px
+        padding-right: 55px
+
+        .hizquierda
+            padding-top: 30px
+            .titulo 
+                margin-top: 0px
+                height: 240px
+                width: 550px
+                font-size: 65px
+                font-weight: 700
+                color: #333
+            
+            .texto 
+                height: 180px
+                width: 550px
+                font-weight: 400
+                color: #999999
+
+            .btn-tratas 
+                font-size: 16px
+                height: 40px
+                width: 250px
+                border-radius: 15px
+                border-style: none
+                background: #999999
+                box-shadow: 1px 2px 4px
+                transition: .3s
+
+                &:hover
+                    box-shadow: 2px 3px 8px
+                
+                a
+                    color: white
+        
+        .derecha 
+            img    
+                width: 550px
+                border-radius: 15px
+                box-shadow: 10px 10px 6px
+    // End section 
+
+    //  Start footer    
+
+
+    footer 
+        margin-top: 150px
+        text-align: center
+        color: #999
+
+        footer h3 
+            font-weight: 400
+            margin-bottom: -10px
+
+
+        .lista-footer 
+            display: flex
+            justify-content: center
+            padding: 0
+
+            .foot-txt-hiz 
+                margin-top: -5px
+                margin-right: 70px
+
+            li 
+                margin: 10px
+
+            span
+                img 
+                    width: 30px
+                    margin: 8px
+            .foot-txt-der 
+                margin-top: -5px
+                margin-left: 70px
+
+    //  End footer   
+
