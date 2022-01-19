@@ -1,0 +1,253 @@
+@mixin flex-row-around
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+
+@mixin flex-row-between
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+@mixin flex-row-center
+    display: flex
+    flex-direction: row
+    justify-content: center
+
+@mixin flex-row-end
+    display: flex
+    flex-direction: row
+    justify-content: end
+
+@mixin hover
+    cursor: pointer
+    transform: scale(1.1)
+    
+//// Start Inicio (index)
+
+body 
+    margin: 0
+    padding: 0
+    font-size: 16px
+    font-family: 'Open Sans', sans-serif
+
+li
+    list-style: none
+
+a 
+    text-decoration: none
+    font-weight: 400
+    color: #666
+    transition: .3s
+
+.btn:hover 
+    @include hover
+
+// Start header
+
+header
+    @include flex-row-center
+    height: 80px
+    margin-bottom: 45px
+    align-items: center
+    box-shadow: 0 0 5px
+
+.navbar 
+    @include flex-row-between
+    width: 100%
+    
+    .primera-lista 
+        @include flex-row-around
+        width: 680px
+
+        .primera-item 
+            vertical-align: middle
+            margin-right: 57px
+            transition: .3s
+
+            &:hover
+                @include hover
+
+            a:hover
+                color: black
+            
+        .logo 
+            margin-top: -3px
+            margin-right: 60px
+            width: 90px
+
+        .inicio a 
+            color: black
+            font-weight: 600
+            transition: .3s
+    
+
+    .segunda-lista 
+        @include flex-row-end
+        margin-right: 36px
+        width: 630px
+        
+        .segunda-item 
+            margin-left: 43px
+            transition: .3s
+            &:hover
+                @include hover
+
+            a
+                vertical-align: sub
+                &:hover
+                    color: black
+        
+        .search 
+            input 
+                margin-top: 4px
+                text-align: center
+                height: 25px
+                border: none
+                border-radius: 15px
+                box-shadow: 0 0 3px
+                &:focus 
+                    outline: none
+
+        .btn-registrate 
+            font-size: 16px
+            height: 30px
+            width: 110px
+            border-radius: 15px
+            border-style: none
+            background-color: #1EAAF1
+            color: white
+// End header 
+
+// Start section
+section
+    @include flex-row-around
+    margin-bottom: 95px
+    padding-left: 55px
+    padding-right: 55px
+
+    .hizquierda
+        padding-top: 30px
+        .titulo 
+            margin-top: 0px
+            height: 240px
+            width: 550px
+            font-size: 65px
+            font-weight: 700
+            color: #333
+        
+        .texto 
+            height: 180px
+            width: 550px
+            font-weight: 400
+            color: #999999
+
+        .btn-tratas 
+            font-size: 16px
+            height: 40px
+            width: 250px
+            border-radius: 15px
+            border-style: none
+            background: #999999
+            box-shadow: 1px 2px 4px
+            transition: .3s
+
+            &:hover
+                box-shadow: 2px 3px 8px
+            
+            a
+                color: white
+    
+    .derecha 
+        img    
+            width: 550px
+            border-radius: 15px
+            box-shadow: 10px 10px 6px
+// End section 
+
+//  Start footer    
+
+
+footer 
+    margin-top: 150px
+    text-align: center
+    color: #999
+
+    footer h3 
+        font-weight: 400
+        margin-bottom: -10px
+
+
+    .lista-footer 
+        display: flex
+        justify-content: center
+        padding: 0
+
+        .foot-txt-hiz 
+            margin-top: -5px
+            margin-right: 70px
+
+        li 
+            margin: 10px
+        
+            img 
+                width: 30px
+            
+        .foot-txt-der 
+            margin-top: -5px
+            margin-left: 70px
+
+//  End footer   
+
+//// End Inicio (index)
+
+
+.switch 
+    position: relative
+    display: inline-block
+    width: 60px
+    height: 34px
+
+.slider 
+    position: absolute
+    cursor: pointer
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #ccc
+    -webkit-transition: .4s
+    transition: .4s
+
+
+.slider:before 
+    position: absolute
+    content: ""
+    height: 26px
+    width: 26px
+    left: 4px
+    bottom: 4px
+    background-color: white
+    -webkit-transition: .4s
+    transition: .4s
+
+
+input:checked + .slider 
+    background-color: #4cd74c
+
+
+input:focus + .slider 
+    box-shadow: 0 0 1px #3eae3e
+
+  
+input:checked + .slider:before 
+    -webkit-transform: translateX(26px)
+    -ms-transform: translateX(26px)
+    transform: translateX(26px)
+
+
+.slider.round 
+    border-radius: 34px
+
+  
+.slider.round:before 
+    border-radius: 50%

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuSpain</title>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body >
+
+    {{>header}}
+
+    <section class="section-inicio">
+        <div class="hizquierda">
+            <h1 class="titulo">
+                {{title}}
+            </h1>
+            <p class="texto">
+                {{paragraph}} 
+            </p>
+            <button class="btn btn-tratas">
+                <a href="billetes.html">Buscar nuestras tratas</a>
+            </button>
+            
+        </div>
+        <div class="derecha">
+            <img src="images/1.2.png" alt="">
+        </div>
+    </section>
+
+    {{>footer}}
+
+</body>
+</html>
